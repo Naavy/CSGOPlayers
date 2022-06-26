@@ -1,0 +1,25 @@
+@import "src/colors.scss";
+
+.wrapper {
+  min-height: 100vh;
+  background-color: $background-dark;
+  color: $main-font;
+  padding: 10px 30px;
+
+  .imageWrapper {
+    width: 20%;
+
+    .image {
+      width: 100%;
+    }
+  }
+
+  .searcher {
+    width: 400px;
+  }
+
+  .list {
+    margin-top: 40px;
+    width: 100%;
+  }
+}

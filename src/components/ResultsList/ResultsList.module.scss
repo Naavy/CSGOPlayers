@@ -1,0 +1,58 @@
+@import "src/colors.scss";
+
+.header {
+  background: linear-gradient(
+    180deg,
+    rgba(33, 36, 52, 1) 0%,
+    rgba(41, 44, 61, 1) 100%
+  );
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.namesColumns {
+  color: $name-column;
+  font-size: 11px;
+  padding: 10px 0;
+
+  .won {
+    color: $column-won;
+  }
+
+  .lost {
+    color: $column-lost;
+  }
+}
+
+.divider {
+  color: $divider;
+  margin: 0;
+  width: 100%;
+}
+
+.whiteLogoWrapper {
+  padding: 10px;
+
+  .line {
+    width: 1px;
+    height: 22px;
+    border-right: 1px solid $divider;
+  }
+
+  .whiteLogo {
+    width: 26px;
+    margin-right: 20px;
+  }
+}
+
+.data {
+  font-size: 11px;
+}
+
+.footer {
+  background-color: $pagination;
+  color: $name-column;
+  font-size: 11px;
+  padding: 10px;
+}
