@@ -1,17 +1,13 @@
 import { Box, Grid } from "@mui/material";
-import { useState } from "react";
-import ScoreboardContext from "../../context/ScoreboardContext";
+import { ScoreboardContextProvider } from "../../context/ScoreboardContext";
 import logo from "../../images/logo.png";
 import ResultsList from "../ResultsList/ResultsList";
 import Searcher from "../Searcher/Searcher";
 import styles from "./Scoreboard.module.scss";
 
 const Scoreboard = (): JSX.Element => {
-  const [page, setPage] = useState(1);
-  const [searchedPhrase, setSearchedPhrase] = useState("");
-
   return (
-    <ScoreboardContext.Provider value={{ page, setPage, searchedPhrase, setSearchedPhrase }}>
+    <ScoreboardContextProvider>
       <Grid
         container
         alignItems="center"
@@ -29,7 +25,7 @@ const Scoreboard = (): JSX.Element => {
           <ResultsList />
         </Box>
       </Grid>
-    </ScoreboardContext.Provider>
+    </ScoreboardContextProvider>
   );
 };
 

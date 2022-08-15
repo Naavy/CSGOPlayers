@@ -4,7 +4,7 @@ import whitelogo from "../../images/whitelogo.png";
 import styles from "./ResultsList.module.scss";
 import Footer from "../Footer/Footer";
 import { useContext, useEffect, useState } from "react";
-import ScoreboardContext, { ScoreboardContextInterface } from "../../context/ScoreboardContext";
+import ScoreboardContext from "../../context/ScoreboardContext";
 
 interface Data {
   size: number;
@@ -24,7 +24,7 @@ interface Data {
 }
 
 const ResultsList = (): JSX.Element => {
-  const { page, searchedPhrase } = useContext(ScoreboardContext) as ScoreboardContextInterface;
+  const { page, searchedPhrase } = useContext(ScoreboardContext);
   const [url, setUrl] = useState(`https://api.ggpredict.dev:8080/restapi/players?page=${page}&searchBy=${searchedPhrase}`);
 
   const { isLoading, data } = useFetch<Data>(url);

@@ -2,7 +2,7 @@ import { Box, Grid } from "@mui/material";
 import { useContext } from "react";
 import FirstPageIcon from "@mui/icons-material/FirstPage";
 import LastPageIcon from "@mui/icons-material/LastPage";
-import ScoreboardContext, { ScoreboardContextInterface } from "../../context/ScoreboardContext";
+import ScoreboardContext from "../../context/ScoreboardContext";
 import {
   StyledIconButton,
   StyledNextPage,
@@ -18,7 +18,7 @@ interface FooterProps {
 const Footer = ({ size, totalPages }: FooterProps): JSX.Element => {
   const { page, setPage } = useContext(
     ScoreboardContext
-  ) as ScoreboardContextInterface;
+  );
 
   const goToNextPage = (): void => {
     setPage(page + 1);
